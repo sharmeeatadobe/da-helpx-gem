@@ -56,7 +56,7 @@
     }
 
     .breadcrumb ul li:not(:nth-last-child(1)) {
-        display: none
+        /* display: none */
     }
 
     .breadcrumb ul li:not(:first-child)::before {
