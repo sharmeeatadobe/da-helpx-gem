@@ -1,0 +1,153 @@
+.chiclet-container {
+  margin: 1rem auto;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  .chiclet {
+      width: 8.0625rem;
+      height: 7.5rem;
+      box-shadow: 0 0.125rem 0.1875rem 0 #eaeaea,
+          0 0.0625rem 0.25rem 0 rgba(0, 0, 0, 0.2);
+      border-radius: 0.625rem;
+      display: flex;
+      text-decoration: none;
+      color: black;
+      .icon-text-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: auto;
+          .product-icon {
+              height: 3rem;
+              width: 3rem;
+              margin-top: 1.5rem;
+              border-radius: 0.625rem;
+          }
+          .title {
+              font-size: 1rem;
+              text-align: center;
+              margin: 0.75rem 0;
+          }
+          .view-all-icon {
+              height: 3rem;
+              width: 3rem;
+              margin-top: 1.5rem;
+              border-radius: 0.625rem;
+              background: rgba(0, 0, 0, 0.06)
+                  url('/content/dam/help/helpxNext/icons/supportHub-app-modal-drawer.svg')
+                  no-repeat center;
+          }
+      }
+      &.view-all {
+          cursor: pointer;
+      }
+  }
+}
+#view-all-modal {
+  margin: 0 auto;
+  padding: 0;
+  top: 2.5rem;
+  width: 85%;
+  max-width: 75rem;
+  border: none;
+  border-radius: 0.635rem;
+  box-shadow: 0 0.125rem 0.1875rem 0 #eaeaea,
+      0 0.0625rem 0.25rem 0 rgba(0, 0, 0, 0.2);
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+      display: none;
+  }
+  &::backdrop {
+      background: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-container {
+      display: inline-block;
+      width: 100%;
+      .modal-content {
+          margin: 3.75rem;
+          .category-title {
+              font-size: 1.25rem;
+              font-weight: bold;
+              margin: 1.75rem 0 0.75rem 0;
+          }
+          .categorised-app-container {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              .modal-chiclet {
+                  width: 21.5rem;
+                  margin: 0.75rem 0;
+                  .icon-text-wrapper {
+                      display: flex;
+                      align-items: center;
+                      .product-icon {
+                          width: 2.5rem;
+                          height: 2.5rem;
+                          margin-right: 0.635rem;
+                          border-radius: 0.3125rem;
+                      }
+                      .app-title {
+                          font-size: 1rem;
+                          margin: 0;
+                          text-decoration: none;
+                          color: black;
+                      }
+                  }
+              }
+          }
+      }
+      .btn-close {
+          cursor: pointer;
+          position: sticky;
+          float: inline-end;
+          top: 1.5rem;
+          right: 1.5rem;
+          border: none;
+          height: 1.5rem;
+          width: 1.5rem;
+          background: url('/content/dam/help/helpxNext/icons/supportHub-modal-close.svg')
+              no-repeat center;
+      }
+  }
+}
+
+/* @media @for-tablet-only {
+  .chiclet-container {
+      .chiclet {
+          width: 8.8125rem;
+      }
+  }
+  #view-all-modal {
+      .modal-container {
+          .modal-content {
+              .categorised-app-container {
+                  grid-template-columns: 1fr 1fr;
+                  .modal-chiclet {
+                      width: 17.75rem;
+                  }
+              }
+          }
+      }
+  }
+} */
+/* @media @for-phone-only {
+  .chiclet-container {
+      .chiclet {
+          width: 8.625rem;
+      }
+  }
+  #view-all-modal {
+      .modal-container {
+          .modal-content {
+              .categorised-app-container {
+                  grid-template-columns: 1fr;
+                  .modal-chiclet {
+                      width: 15.5rem;
+                  }
+              }
+          }
+      }
+  }
+} */
